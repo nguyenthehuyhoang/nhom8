@@ -1,0 +1,31 @@
+import numpy as np
+
+# Nhập ma trận hệ số A và ma trận cột B từ người dùng (ví dụ với hệ phương trình 2x + 3y = 8 và 4x - y = 6)
+n = int(input("Nhập số phương trình và số ẩn (n): "))
+A = np.zeros((n, n))
+B = np.zeros(n)
+
+print("Nhập ma trận hệ số A:")
+for i in range(n):
+    A_row = input().split()
+    for j in range(n):
+        A[i][j] = float(A_row[j])
+
+print("Nhập ma trận cột B:")
+B_input = input().split()
+for i in range(n):
+    B[i] = float(B_input[i])
+
+# Giải hệ phương trình
+A_inv = np.linalg.inv(A)
+X = np.dot(A_inv, B)
+
+# In kết quả
+print("Ma trận hệ số A:")
+print(A)
+print("Ma trận cột B:")
+print(B)
+print("Nghịch đảo của A:")
+print(A_inv)
+print("Nghiệm của hệ phương trình:")
+print(X)
