@@ -35,9 +35,6 @@ def main():
             print("Giá trị không hợp lệ. Vui lòng nhập lại.")
 
 
-
-
-
     hesoan_matrix = []
     hesotudo_matrix = []
 
